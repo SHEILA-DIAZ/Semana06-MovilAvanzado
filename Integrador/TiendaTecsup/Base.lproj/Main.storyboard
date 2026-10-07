@@ -508,11 +508,82 @@
                         <outlet property="apellidoTextField" destination="DAT-tf-ape" id="DAT-ou-001"/>
                         <outlet property="dniTextField" destination="DAT-tf-dni" id="DAT-ou-002"/>
                         <outlet property="nombreTextField" destination="DAT-tf-nom" id="DAT-ou-003"/>
+                        <segue destination="BOL-vc-001" kind="presentation" identifier="verBoleta" id="DAT-sg-vbo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DAT-fr-001" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1400" y="900"/>
+        </scene>
+        <!--Boleta-->
+        <scene sceneID="BOL-sc-001">
+            <objects>
+                <viewController id="BOL-vc-001" customClass="BoletaViewController" customModule="TiendaTecsup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BOL-vw-001">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="BOL-st-001">
+                                <rect key="frame" x="24" y="32" width="345" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOLETA DE COMPRA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOL-lb-tit">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="26"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cliente (Categoría) · DNI" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOL-lb-cli">
+                                        <rect key="frame" x="0.0" y="38" width="345" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOL-sp-001">
+                                        <rect key="frame" x="0.0" y="68" width="345" height="1"/>
+                                        <color key="backgroundColor" systemColor="separatorColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="BOL-cs-sp1"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detalle" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOL-lb-det">
+                                        <rect key="frame" x="0.0" y="81" width="345" height="119"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOL-bt-cer">
+                                <rect key="frame" x="24" y="758" width="345" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BOL-cs-hce"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Cerrar"/>
+                                <connections>
+                                    <action selector="cerrarTapped:" destination="BOL-vc-001" eventType="touchUpInside" id="BOL-ac-cer"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BOL-sa-001"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BOL-st-001" firstAttribute="top" secondItem="BOL-sa-001" secondAttribute="top" constant="32" id="BOL-cs-001"/>
+                            <constraint firstItem="BOL-st-001" firstAttribute="leading" secondItem="BOL-sa-001" secondAttribute="leading" constant="24" id="BOL-cs-002"/>
+                            <constraint firstItem="BOL-sa-001" firstAttribute="trailing" secondItem="BOL-st-001" secondAttribute="trailing" constant="24" id="BOL-cs-003"/>
+                            <constraint firstItem="BOL-bt-cer" firstAttribute="leading" secondItem="BOL-sa-001" secondAttribute="leading" constant="24" id="BOL-cs-004"/>
+                            <constraint firstItem="BOL-sa-001" firstAttribute="trailing" secondItem="BOL-bt-cer" secondAttribute="trailing" constant="24" id="BOL-cs-005"/>
+                            <constraint firstItem="BOL-sa-001" firstAttribute="bottom" secondItem="BOL-bt-cer" secondAttribute="bottom" constant="24" id="BOL-cs-006"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clienteLabel" destination="BOL-lb-cli" id="BOL-ou-001"/>
+                        <outlet property="detalleLabel" destination="BOL-lb-det" id="BOL-ou-002"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BOL-fr-001" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2100" y="900"/>
         </scene>
     </scenes>
     <resources>

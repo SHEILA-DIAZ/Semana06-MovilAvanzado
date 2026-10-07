@@ -92,6 +92,15 @@ class CarritoModel {
         items.removeAll()
     }
 
+    // Regla 9: al confirmar, el stock de cada producto baja según lo comprado
+    // y el carrito se vacía
+    func confirmarCompra() {
+        for item in items {
+            item.producto.stock -= item.cantidad
+        }
+        vaciar()
+    }
+
     // Regla 5: los cálculos viven en el modelo
     func montoDescuento() -> Double {
         return subtotal() * porcentajeDescuento()

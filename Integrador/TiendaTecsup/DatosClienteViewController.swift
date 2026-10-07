@@ -38,9 +38,16 @@ class DatosClienteViewController: UIViewController {
         let cliente = ClienteModel(pCodigo: ClienteModel.siguienteCodigo(),
                                    pApellido: apellido, pNombre: nombre, pDni: dni)
 
-        // Checkpoint 5: aquí se presentará la boleta con el segue modal "verBoleta"
-        mostrarAlerta(titulo: "Datos correctos",
-                      mensaje: "\(cliente.nombreCompleto()) (\(carrito.categoriaCliente())) DNI: \(cliente.Dni)")
+        // La boleta se presenta como modal; el cliente viaja como sender
+        performSegue(withIdentifier: "verBoleta", sender: cliente)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "verBoleta" {
+            let destino = segue.destination as! BoletaViewController
+            destino.carrito = carrito               // el MISMO objeto, no una copia
+            destino.cliente = sender as? ClienteModel
+        }
     }
 
     func mostrarAlerta(titulo: String, mensaje: String) {
