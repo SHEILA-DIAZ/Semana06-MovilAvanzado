@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0BFD980D45A6BC7EA1F8C40F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBB0B1B8150A53DCE06DD1E0 /* Assets.xcassets */; };
 		6176BBF44A2F6EBE1DAC6465 /* CarritoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4B30D9FDB347CA97C0679A /* CarritoViewController.swift */; };
+		6581231ECE043DCC606C5414 /* DatosClienteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029D03671F1FC91203319760 /* DatosClienteViewController.swift */; };
 		6B8590EC6EDECFB511ADAFE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD2E80C34F33FD42B6187F /* AppDelegate.swift */; };
 		9601C2C774EF4F42A444405E /* Modelos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBFFD618DB561293FDBA492 /* Modelos.swift */; };
 		96CA06110E422AFE40599730 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AF32DA0CB3A0135A51C0D8 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		029D03671F1FC91203319760 /* DatosClienteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosClienteViewController.swift; sourceTree = "<group>"; };
 		17FD2E80C34F33FD42B6187F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21F24B30A0CB768E09E8A712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		328C5D07862E5708F2F1866C /* DetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				FBB0B1B8150A53DCE06DD1E0 /* Assets.xcassets */,
 				BB4B30D9FDB347CA97C0679A /* CarritoViewController.swift */,
 				94E268D2792CA618479DB789 /* CatalogoViewController.swift */,
+				029D03671F1FC91203319760 /* DatosClienteViewController.swift */,
 				328C5D07862E5708F2F1866C /* DetalleViewController.swift */,
 				21F24B30A0CB768E09E8A712 /* Info.plist */,
 				8BBFFD618DB561293FDBA492 /* Modelos.swift */,
@@ -138,6 +141,7 @@
 				6B8590EC6EDECFB511ADAFE2 /* AppDelegate.swift in Sources */,
 				6176BBF44A2F6EBE1DAC6465 /* CarritoViewController.swift in Sources */,
 				DA19F27A047C67B013912C77 /* CatalogoViewController.swift in Sources */,
+				6581231ECE043DCC606C5414 /* DatosClienteViewController.swift in Sources */,
 				9C25F5F4B42F9604603271D3 /* DetalleViewController.swift in Sources */,
 				9601C2C774EF4F42A444405E /* Modelos.swift in Sources */,
 				AF8FB966DF091C8136EFDF01 /* SceneDelegate.swift in Sources */,

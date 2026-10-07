@@ -34,6 +34,26 @@ class CarritoViewController: UIViewController, UITableViewDataSource {
         categoriaLabel.text = carrito.categoriaCliente()
     }
 
+    // No se puede finalizar la compra con el carrito vacío
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "irDatosCliente" && carrito.items.isEmpty {
+            let alerta = UIAlertController(title: "Carrito vacío",
+                                           message: "Agrega al menos un producto antes de finalizar la compra.",
+                                           preferredStyle: .alert)
+            alerta.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alerta, animated: true)
+            return false
+        }
+        return true
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "irDatosCliente" {
+            let destino = segue.destination as! DatosClienteViewController
+            destino.carrito = carrito               // el MISMO objeto, no una copia
+        }
+    }
+
     // MARK: UITableViewDataSource
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

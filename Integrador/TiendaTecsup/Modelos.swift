@@ -142,6 +142,14 @@ class ClienteModel {
 
 // Agregado para el caso integrador (la clase del Ejercicio 2 queda igual)
 extension ClienteModel {
+    // Cada cliente registrado recibe un código correlativo
+    static var ultimoCodigo: Int32 = 0
+
+    static func siguienteCodigo() -> Int32 {
+        ultimoCodigo += 1
+        return ultimoCodigo
+    }
+
     func nombreCompleto() -> String {
         return "\(Nombre) \(Apellido)"
     }
