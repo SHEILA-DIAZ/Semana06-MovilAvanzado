@@ -39,4 +39,8 @@ class CatalogoViewController: UIViewController {
     // TODO B2: en viewWillAppear actualiza el título del botón:
     //    "Ver carrito (n)" con n = carrito.cantidadTotal()
     //    (se ejecuta cada vez que vuelves a esta pantalla, a diferencia de viewDidLoad)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        verCarritoButton.setTitle("Ver carrito (\(carrito.cantidadTotal()))", for: .normal)
+    }
 }

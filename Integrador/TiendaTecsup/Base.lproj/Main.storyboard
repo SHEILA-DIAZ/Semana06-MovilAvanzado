@@ -242,10 +242,187 @@
                     <view key="view" contentMode="scaleToFill" id="CAR-vw-001">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" allowsSelection="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-tv-001">
+                                <rect key="frame" x="0.0" y="103" width="393" height="401"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="itemCell" textLabel="CAR-cl-txt" detailTextLabel="CAR-cl-det" style="IBUITableViewCellStyleValue1" id="CAR-cl-001">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CAR-cl-001" id="CAR-cv-001">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Producto x1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CAR-cl-txt">
+                                                    <rect key="frame" x="20" y="12" width="94" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="S/ 0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CAR-cl-det">
+                                                    <rect key="frame" x="315" y="12" width="58" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="CAR-vc-001" id="CAR-ou-tds"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu carrito está vacío" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-lb-vac">
+                                <rect key="frame" x="117" y="293" width="159" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-st-tot">
+                                <rect key="frame" x="24" y="512" width="345" height="198"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-sp-001">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="1"/>
+                                        <color key="backgroundColor" systemColor="separatorColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="CAR-cs-sp1"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-st-sub">
+                                        <rect key="frame" x="0.0" y="11" width="345" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtotal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-lb-tsu">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="S/ 0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-lb-sub">
+                                                <rect key="frame" x="72" y="0.0" width="273" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-st-des">
+                                        <rect key="frame" x="0.0" y="42" width="345" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descuento (0%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-lb-tde">
+                                                <rect key="frame" x="0.0" y="0.0" width="121" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="-S/ 0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-lb-des">
+                                                <rect key="frame" x="129" y="0.0" width="216" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-st-igv">
+                                        <rect key="frame" x="0.0" y="73" width="345" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IGV (18%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-lb-tig">
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="S/ 0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-lb-igv">
+                                                <rect key="frame" x="86" y="0.0" width="259" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-sp-002">
+                                        <rect key="frame" x="0.0" y="104" width="345" height="1"/>
+                                        <color key="backgroundColor" systemColor="separatorColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="CAR-cs-sp2"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-st-tot2">
+                                        <rect key="frame" x="0.0" y="115" width="345" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-lb-tto">
+                                                <rect key="frame" x="0.0" y="0.0" width="52" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="S/ 0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-lb-tot">
+                                                <rect key="frame" x="60" y="0.0" width="285" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-st-cat">
+                                        <rect key="frame" x="0.0" y="146" width="345" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoría" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-lb-tca">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Regular" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-lb-cat">
+                                                <rect key="frame" x="83" y="0.0" width="262" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-bt-fin">
+                                <rect key="frame" x="24" y="734" width="345" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CAR-cs-hfi"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Finalizar compra"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="CAR-sa-001"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CAR-tv-001" firstAttribute="top" secondItem="CAR-sa-001" secondAttribute="top" id="CAR-cs-001"/>
+                            <constraint firstItem="CAR-tv-001" firstAttribute="leading" secondItem="CAR-sa-001" secondAttribute="leading" id="CAR-cs-002"/>
+                            <constraint firstItem="CAR-sa-001" firstAttribute="trailing" secondItem="CAR-tv-001" secondAttribute="trailing" id="CAR-cs-003"/>
+                            <constraint firstItem="CAR-st-tot" firstAttribute="top" secondItem="CAR-tv-001" secondAttribute="bottom" constant="8" id="CAR-cs-004"/>
+                            <constraint firstItem="CAR-st-tot" firstAttribute="leading" secondItem="CAR-sa-001" secondAttribute="leading" constant="24" id="CAR-cs-005"/>
+                            <constraint firstItem="CAR-sa-001" firstAttribute="trailing" secondItem="CAR-st-tot" secondAttribute="trailing" constant="24" id="CAR-cs-006"/>
+                            <constraint firstItem="CAR-bt-fin" firstAttribute="top" secondItem="CAR-st-tot" secondAttribute="bottom" constant="24" id="CAR-cs-007"/>
+                            <constraint firstItem="CAR-bt-fin" firstAttribute="leading" secondItem="CAR-sa-001" secondAttribute="leading" constant="24" id="CAR-cs-008"/>
+                            <constraint firstItem="CAR-sa-001" firstAttribute="trailing" secondItem="CAR-bt-fin" secondAttribute="trailing" constant="24" id="CAR-cs-009"/>
+                            <constraint firstItem="CAR-sa-001" firstAttribute="bottom" secondItem="CAR-bt-fin" secondAttribute="bottom" constant="24" id="CAR-cs-010"/>
+                            <constraint firstItem="CAR-lb-vac" firstAttribute="centerX" secondItem="CAR-tv-001" secondAttribute="centerX" id="CAR-cs-011"/>
+                            <constraint firstItem="CAR-lb-vac" firstAttribute="centerY" secondItem="CAR-tv-001" secondAttribute="centerY" id="CAR-cs-012"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Carrito" id="CAR-ni-001"/>
+                    <connections>
+                        <outlet property="categoriaLabel" destination="CAR-lb-cat" id="CAR-ou-001"/>
+                        <outlet property="descuentoLabel" destination="CAR-lb-des" id="CAR-ou-002"/>
+                        <outlet property="descuentoTituloLabel" destination="CAR-lb-tde" id="CAR-ou-003"/>
+                        <outlet property="igvLabel" destination="CAR-lb-igv" id="CAR-ou-004"/>
+                        <outlet property="subtotalLabel" destination="CAR-lb-sub" id="CAR-ou-005"/>
+                        <outlet property="tablaItems" destination="CAR-tv-001" id="CAR-ou-006"/>
+                        <outlet property="totalLabel" destination="CAR-lb-tot" id="CAR-ou-007"/>
+                        <outlet property="vacioLabel" destination="CAR-lb-vac" id="CAR-ou-008"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CAR-fr-001" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -255,6 +432,9 @@
     <resources>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
