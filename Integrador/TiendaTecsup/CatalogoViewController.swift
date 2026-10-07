@@ -8,8 +8,17 @@ class CatalogoViewController: UIViewController {
         Producto(nombre: "Refrigeradora", precio: 2000, stock: 5),
         Producto(nombre: "Licuadora", precio: 250, stock: 10),
         Producto(nombre: "Laptop", precio: 3500, stock: 3),
-        Producto(nombre: "Cocina", precio: 1200, stock: 4)
+        Producto(nombre: "Cocina", precio: 1200, stock: 4),
+        Producto(nombre: "Microondas", precio: 450, stock: 6)
     ]
+
+    // Prueba final (Regla 10): agregar el Microondas (S/ 450, stock 6)
+    // - Cambios en el Storyboard: 1 -> un botón nuevo "Microondas - S/ 450" con Tag 4,
+    //   conectado a la MISMA acción productoTapped. No se dibujó ningún segue nuevo:
+    //   usa el mismo verDetalle.
+    // - Cambios en el código: 1 -> una línea nueva en el array productos (posición 4 = Tag 4).
+    // Nada más cambia: Detalle, Carrito, Datos del cliente y Boleta trabajan con
+    // cualquier Producto, y los cálculos viven en CarritoModel.
 
     // El carrito se crea UNA sola vez, aquí (Regla 2)
     let carrito = CarritoModel()

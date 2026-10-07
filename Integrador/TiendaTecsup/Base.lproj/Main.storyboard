@@ -91,6 +91,17 @@
                                             <action selector="productoTapped:" destination="CAT-vc-001" eventType="touchUpInside" id="CAT-ac-003"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAT-bt-004">
+                                        <rect key="frame" x="0.0" y="295" width="345" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="CAT-cs-h04"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Microondas - S/ 450"/>
+                                        <connections>
+                                            <action selector="productoTapped:" destination="CAT-vc-001" eventType="touchUpInside" id="CAT-ac-004"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAT-bt-vcr">
                                         <rect key="frame" x="0.0" y="295" width="345" height="25"/>
                                         <state key="normal" title="Button"/>
