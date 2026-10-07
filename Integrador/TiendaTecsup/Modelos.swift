@@ -151,3 +151,8 @@ extension ClienteModel {
         return dni.count == 8 && dni.allSatisfy { $0.isASCII && $0.isNumber }
     }
 }
+
+// Formato de montos para mostrar en pantalla: "S/ 2000.00"
+func soles(_ monto: Double) -> String {
+    return "S/ " + String(format: "%.2f", monto)
+}

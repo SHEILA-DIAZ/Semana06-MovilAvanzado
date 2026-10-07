@@ -8,21 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		0BFD980D45A6BC7EA1F8C40F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBB0B1B8150A53DCE06DD1E0 /* Assets.xcassets */; };
-		2E7C5433B7E3346063D907F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B60B58B7DF35881E6D703F0 /* ViewController.swift */; };
+		6176BBF44A2F6EBE1DAC6465 /* CarritoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4B30D9FDB347CA97C0679A /* CarritoViewController.swift */; };
 		6B8590EC6EDECFB511ADAFE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD2E80C34F33FD42B6187F /* AppDelegate.swift */; };
 		9601C2C774EF4F42A444405E /* Modelos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBFFD618DB561293FDBA492 /* Modelos.swift */; };
 		96CA06110E422AFE40599730 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AF32DA0CB3A0135A51C0D8 /* Main.storyboard */; };
+		9C25F5F4B42F9604603271D3 /* DetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328C5D07862E5708F2F1866C /* DetalleViewController.swift */; };
 		AC2ADBF1A5F824D28322BE23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E17E6ED6C13A180AEBBB999 /* LaunchScreen.storyboard */; };
 		AF8FB966DF091C8136EFDF01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C95AD1A9E4EA507BD9AAD9C /* SceneDelegate.swift */; };
+		DA19F27A047C67B013912C77 /* CatalogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E268D2792CA618479DB789 /* CatalogoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		17FD2E80C34F33FD42B6187F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21F24B30A0CB768E09E8A712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		7B60B58B7DF35881E6D703F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		328C5D07862E5708F2F1866C /* DetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleViewController.swift; sourceTree = "<group>"; };
 		7C95AD1A9E4EA507BD9AAD9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		895B90C08E1D434F46BDB008 /* TiendaTecsup.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = TiendaTecsup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BBFFD618DB561293FDBA492 /* Modelos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modelos.swift; sourceTree = "<group>"; };
+		94E268D2792CA618479DB789 /* CatalogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogoViewController.swift; sourceTree = "<group>"; };
+		BB4B30D9FDB347CA97C0679A /* CarritoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarritoViewController.swift; sourceTree = "<group>"; };
 		C466A950314D5D0BEBCA869B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E64BCD7DAD2B7CA6E7D03F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FBB0B1B8150A53DCE06DD1E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,10 +54,12 @@
 			children = (
 				17FD2E80C34F33FD42B6187F /* AppDelegate.swift */,
 				FBB0B1B8150A53DCE06DD1E0 /* Assets.xcassets */,
+				BB4B30D9FDB347CA97C0679A /* CarritoViewController.swift */,
+				94E268D2792CA618479DB789 /* CatalogoViewController.swift */,
+				328C5D07862E5708F2F1866C /* DetalleViewController.swift */,
 				21F24B30A0CB768E09E8A712 /* Info.plist */,
 				8BBFFD618DB561293FDBA492 /* Modelos.swift */,
 				7C95AD1A9E4EA507BD9AAD9C /* SceneDelegate.swift */,
-				7B60B58B7DF35881E6D703F0 /* ViewController.swift */,
 				1E17E6ED6C13A180AEBBB999 /* LaunchScreen.storyboard */,
 				16AF32DA0CB3A0135A51C0D8 /* Main.storyboard */,
 			);
@@ -130,9 +136,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B8590EC6EDECFB511ADAFE2 /* AppDelegate.swift in Sources */,
+				6176BBF44A2F6EBE1DAC6465 /* CarritoViewController.swift in Sources */,
+				DA19F27A047C67B013912C77 /* CatalogoViewController.swift in Sources */,
+				9C25F5F4B42F9604603271D3 /* DetalleViewController.swift in Sources */,
 				9601C2C774EF4F42A444405E /* Modelos.swift in Sources */,
 				AF8FB966DF091C8136EFDF01 /* SceneDelegate.swift in Sources */,
-				2E7C5433B7E3346063D907F4 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
